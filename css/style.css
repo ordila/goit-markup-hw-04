@@ -125,6 +125,23 @@ body {
 }
 /* END HEADER FOR TWO PAGEs*/
 /*FOOTER FOR TWO PAGES */
+.footer_container {
+  display: flex;
+}
+.social_footer_text {
+  color: white;
+  margin-bottom: 16px;
+}
+.social_footer {
+  margin-left: 120px;
+}
+.social_item_footer:hover .social_link_footer {
+  background-color: #31d0aa;
+}
+.social_link_footer:focus {
+  background-color: #31d0aa;
+  outline: none;
+}
 .footer_p {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -183,7 +200,6 @@ MAIN PAGE START
   background: var(--ocean);
 }
 .effective_section {
-  background: var(--navyblue);
   font-family: "Roboto";
   font-weight: 700;
   font-size: 56px;
@@ -191,6 +207,14 @@ MAIN PAGE START
   letter-spacing: 0.02em;
   color: #ffffff;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/bg/bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: content;
 }
 .title_main_section {
   font-size: 56px;
@@ -221,6 +245,29 @@ MAIN PAGE START
 }
 .features_item:not(:last-child) {
   margin-right: 24px;
+}
+.features_item::before {
+  content: "";
+  display: block;
+  height: 112px;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+  margin-bottom: 8px;
+}
+.dish.features_item::before {
+  background-image: url("../images/icons/antenna.svg");
+}
+.time.features_item::before {
+  background-image: url("../images/icons/clock\ .svg");
+}
+.desctop.features_item::before {
+  background-image: url("../images/icons//diagram\ .svg");
+}
+.astronaut.features_item::before {
+  background-image: url("../images/icons//astronaut\ .svg");
 }
 .features_title {
   position: absolute;
@@ -281,6 +328,9 @@ MAIN PAGE START
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .workers:not(:last-child) {
   margin-right: 24px;
@@ -304,6 +354,62 @@ MAIN PAGE START
   line-height: 1.5;
   color: var(--slate);
   text-align: center;
+  margin-bottom: 8px;
+}
+.social_list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.social_link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4d5ae5;
+  justify-content: center;
+  align-items: center;
+}
+.social_svg {
+  width: 16px;
+  height: 16px;
+  fill: #f4f4fd;
+}
+.customers {
+  padding: 120px 0;
+}
+.title_customers {
+  font-size: 36px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.72px;
+  text-align: center;
+  margin-bottom: 72px;
+}
+.list_customers {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.customer_item {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_customers {
+  fill: #8e8f99;
+}
+.customer_item:hover {
+  border-color: #404bbf;
+}
+.customer_item:hover .img_customers {
+  fill: #404bbf;
 }
 /*MAIN PAGE END */
 /* SECOND PAGE START*/
@@ -334,11 +440,15 @@ MAIN PAGE START
   background-color: var(--ocean);
   color: white;
   border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .button_filtr:focus {
   background-color: var(--ocean);
   color: white;
   border: 1px solid transparent;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .button_portfolio_li:not(:last-child) {
   margin-right: 24px;
@@ -369,7 +479,11 @@ MAIN PAGE START
   margin-right: 24px;
   margin-bottom: 48px;
 }
-
+.photo_item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
 .photo_item:nth-child(3n) {
   margin-right: 0;
 }
