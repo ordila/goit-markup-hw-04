@@ -141,13 +141,13 @@ body {
   letter-spacing: 0.02em;
 }
 .social_footer .social_list_footer {
-  gap: 15px;
+  gap: 16px;
 }
 
 .social_item_footer:hover .social_link_footer {
   background-color: #31d0aa;
 }
-.social_link_footer:focus {
+.social_item .social_link_footer:focus {
   background-color: #31d0aa;
 }
 .footer_text {
